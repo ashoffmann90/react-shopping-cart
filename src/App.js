@@ -18,8 +18,10 @@ function App() {
 		setCart([...cart, item])
 	};
 
-	const removeItem = () => {
-		setCart([])
+	const removeItem = id => {
+		console.log(cart)
+		console.log(cart.filter(book => book.id !== id))
+		setCart(cart.filter(book => book.id !== id))
 	}
 
 	return (
